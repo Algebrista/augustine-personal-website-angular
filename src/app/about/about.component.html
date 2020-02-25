@@ -1,1 +1,91 @@
-<p>about works!</p>
+
+<div class="container">
+  <div class="row">
+    <div class="col 12 animated bounceInLeft">
+      <div class="">
+        <h1 class="cyan-text text-darken-4"><b>About Me</b></h1>
+      </div>
+    </div>
+  </div>
+<ul materialize="collapsible" class="collapsible animated zoomIn faster" data-collapsable="expandable">
+<!-- DESCRIPTION-->
+  <li>
+    <div class="collapsible-header cyan-text text-darken-4">
+      <i class="fa fa-info-circle fa-lg" aria-hidden="true"></i>
+      <b>DESCRIPTION</b>
+    </div>
+    <div id="description" class="collapsible-body row">
+      <div class="col s6 offset-s3 m4 12">
+        <img src="../assets/augustine.jpg" alt="Augustine Matturi Profile" class="circle responsive-img" style="background-color: green">
+      </div>
+
+      <div class="col s12 m8 l10">
+        <span class="flow-text cyan-text text-darken-4">
+Experienced professional in the field of Information Communication and Technology with extensive knowledge and skills in Software Development, Data Management and Web Technology. Delivered tailored purpose training to 200+ people on wide areas of career topic.          </span>
+      </div>
+    </div>
+  </li>
+  <!-- EDUCATION-->
+  <li>
+   <div class="collapsible-header cyan-text text-darken-4">
+     <i class="fa fa-graduation-cap fa-lg" aria-hidden="true"></i>
+     <b>EDUCATION</b>
+   </div>
+    <div class="collapsible-body">
+      <table class="flow-text">
+        <tbody>
+        <tr>
+        <th>University</th>
+          <th>Course</th>
+          <th>Date</th>
+        </tr>
+        <tr *ngFor="let edu of alleducation">
+          <td><a class="black-text" href="{{edu.href}}" target="_blank">{{edu.field_1}}</a></td>
+          <td><i>{{edu.field_2}}</i></td>
+          <td>{{edu.field_3}}</td>
+        </tr>
+
+        </tbody>
+      </table>
+    </div>
+  </li>
+
+<!--Voluntaree and Work Experience-->
+  <li>
+    <div class="collapsible-header cyan-text text-darken-4">
+      <i class="fa fa-briefcase fa-lg" aria-hidden="true"></i>
+      <b>VOLUNTAREE AND WORK EXPERIENCE</b>
+    </div>
+    <div class="collapsible-body">
+      <table class="flow-text" *ngIf="allWorks">
+        <tbody>
+        <tr *ngFor="let work of allWorks, let i = index">
+          <td class="cyan-text text-darken-4">{{work.field_1}}</td>
+          <td><a  class="black-text" href="{{work.href}}" target="_blank">{{work.field_2}}</a></td>
+          <td><i>{{work.field_3}}</i></td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </li>
+<!-- PROJECTS-->
+  <li>
+    <div class="collapsible-header cyan-text text-darken-4">
+      <i class="fa fa-folder-open fa-lg" aria-hidden="true"></i>
+      <b>PROJECTS</b>
+    </div>
+    <div class="collapsible-body cyan-text text-darken-4">
+      <table class="flow-text">
+        <tbody>
+        <tr>
+          <td><a class="cyan-text text-darken-4" href="link to project" target="_blank">Click Me</a></td>
+          <td></td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </li>
+
+
+</ul>
+</div>

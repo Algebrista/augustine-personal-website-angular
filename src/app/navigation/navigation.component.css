@@ -1,12 +1,17 @@
 .brand-logo img{
-  height: 32px;
-  vertical-align: middle;
+  height: 90px;
+  vertical-align: middle; width:90px;
 }
 
 .brand-logo{
   display: inline-block;
   height: 100%;
   transition: all 0.2s ease-in-out;
+
+}
+
+nav ul a:hover {
+  background-color: #e1f5fe!important;
 }
 
 .brand-logo:hover{
@@ -14,7 +19,7 @@
 }
 
 nav ul a {
-  background-color: #e1f5fe!important;
+  background-color: white;
 }
 
 .active{

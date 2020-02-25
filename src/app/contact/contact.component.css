@@ -1,0 +1,11 @@
+.contact-highlight{
+  outline: 0px solid #0277bd;
+  border-radius: 20px;
+
+
+}
+
+.contact-highlight:hover{
+  outline: 1px solid #0277bd;
+  background-color: white!important;
+}

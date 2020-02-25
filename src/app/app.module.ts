@@ -10,6 +10,35 @@ import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { ProjectComponent } from './project/project.component';
 import {MaterializeModule} from 'angular2-materialize';
+import {Router, RouterModule, Routes} from '@angular/router';
+import {SpinnerComponent} from './ui_loading/spinner/spinner.component';
+
+const appRoutes : Routes =[
+  {
+    path: '',
+    component: HomeComponent,
+    data: {title: 'Home'}
+  },
+
+  {
+    path: 'about',
+    component: AboutComponent,
+    data: {title: 'About'}
+  },
+
+  {
+    path: 'project',
+    component: ProjectComponent,
+    data: {title: 'Project'}
+  },
+
+  {
+    path: 'contact',
+    component: ContactComponent,
+    data: {title: 'Contact'}
+  },
+
+];
 
 @NgModule({
   declarations: [
@@ -19,12 +48,15 @@ import {MaterializeModule} from 'angular2-materialize';
     ContactComponent,
     FooterComponent,
     HomeComponent,
-    ProjectComponent
+    ProjectComponent,
+    SpinnerComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    MaterializeModule
+    RouterModule.forRoot(appRoutes,{enableTracing: false}),
+    MaterializeModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]

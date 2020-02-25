@@ -1,1 +1,21 @@
-<p>contact works!</p>
+<div class="container">
+  <div class="row">
+    <div class="col s12 animated bounceInLeft">
+      <div class="">
+        <h1 class="cyan-text text-darken-4"><b>Contact</b></h1>
+      </div>
+    </div>
+  </div>
+
+<div class="row">
+  <a *ngFor="let con of contacts ; let i = index " href="{{con.hrefLink}}" target="_blank" class="col s12 m6 13 animated zoomIn faster">
+    <div class="card-panel light-blue lighten-5 z-depth-1 contact-highlight">
+    <p class="center-align flow-text cyan-text text-darken-4 truncate">
+    <i class="fa fa-{{con.icon}} fa-3x" aria-hidden="true"></i>
+      <br><br><b>{{con.app | uppercase }}</b>
+      <br>{{con.name}}
+    </p>
+    </div>
+  </a>
+</div>
+</div>

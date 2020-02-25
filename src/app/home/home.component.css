@@ -9,6 +9,8 @@
   min-width: 100%;
   width: 150%;
   opacity: 0.15;
+  background-image: url("src/assets/favicon.jpg");
+  background-color: aquamarine;
 }
 
 .sublink:hover{
